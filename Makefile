@@ -7,6 +7,7 @@ commands:
 	| column -t -s ':'
 
 ## check: check code issues
+.PHONY: check
 check:
 	@ruff check .
 

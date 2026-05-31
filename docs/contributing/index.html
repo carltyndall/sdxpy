@@ -56,13 +56,13 @@
 <div class="dropdown">
 <button aria-controls="nav-appendices" aria-haspopup="true">Appendices</button>
 <ul class="dropdown-content" id="nav-appendices">
-<li><a href="../bibliography/">Bibliography</a></li>
-<li><a href="../bonus/">Bonus Material</a></li>
-<li><a href="../syllabus/">Syllabus</a></li>
 <li><a href="../license/">License</a></li>
 <li><a href="../conduct/">Code of Conduct</a></li>
-<li><a class="active" href="../contrib/">Contributing</a></li>
+<li><a class="active" href="../contributing/">Contributing</a></li>
+<li><a href="../bibliography/">Bibliography</a></li>
 <li><a href="../glossary/">Glossary</a></li>
+<li><a href="../syllabus/">Syllabus</a></li>
+<li><a href="../bonus/">Bonus Material</a></li>
 </ul>
 </div>
 <a href="https://github.com/gvwilson/sdxpy">Repository</a>
@@ -74,44 +74,58 @@
 please contact us by email or by filing an issue on this site.
 All contributors must abide by our Code of Conduct.</p>
 <h2>FAQ</h2>
-<p><strong>What sort of feedback would be useful?</strong><br/>
-Everything is welcome, but what would help most is:</p>
+<dl>
+<dt>What sort of feedback would be useful?</dt>
+<dd>
+<p>Everything is welcome, but what would help most is:</p>
 <ol>
 <li>Fixes for mistakes in the code, the descriptions, or the formatting.
     All of the examples run and all of the tests pass,
-    but that doesn't guarantee they're correct.</li>
+but that doesn't guarantee they're correct.</li>
 <li>Reports of continuity errors,
     e.g.,
-    places where a concept is used before it is explained.</li>
+places where a concept is used before it is explained.</li>
 <li>Suggestions for new diagrams, or for ways to improve existing ones.</li>
 <li>New or clearer summary points for each chapter's syllabus.</li>
 <li>More or better exercises.
     "This is too hard" or "this is unclear" helps as well.</li>
 </ol>
-<p><strong>Why don't the examples connect with each other?
-For example, why don't they build toward a complete minimal IDE?</strong><br/>
-It was tempting, but attempts to do this in the past have not gone well.
+</dd>
+<dt>Why don't the examples connect with each other?</dt>
+<dt>For example, why don't they build toward a complete minimal IDE?</dt>
+<dd>
+<p>It was tempting, but attempts to do this in the past have not gone well.
 First, it makes maintenance much more difficult
 because a change in an early chapter may have knock-on effects on several subsequent chapters.
 Second, it constrains what is taught and in what order:
 if the examples are independent of each other,
 instructors can pick and choose the pieces that are most relevant to their audience and goals.</p>
-<p><strong>Can I contribute a chapter?</strong><br/>
-Absolutely, and if enough people do that we will publish a second volume.
+</dd>
+<dt>Can I contribute a chapter?</dt>
+<dd>
+<p>Absolutely, and if enough people do that we will publish a second volume.
 Some things I'd particularly like to see are:</p>
 <ul>
-<li>An object-relational mapper.</li>
-<li>A fuzz tester.</li>
-<li>A package installer.</li>
-<li>A file compression tool.</li>
+<li>An object-relational mapper to show people how tools like <a href="https://www.sqlalchemy.org/">SQLAlchemy</a> work.</li>
+<li>A discrete event simulator to show people how tools like <a href="https://simpy.readthedocs.io/">SimPy</a> work
+    and to explore co-operative concurrency using generators.</li>
+<li>An issue-tracking system, mostly to show how workflow management and authentication work.</li>
+<li>Another build system that uses publish/subscribe instead of the top-down approach of <a class="xref" href="../build/">Chapter 19</a>.</li>
+<li>A fuzz tester that uses some of the ideas from [Zeller2023].</li>
+<li>A package installer to complement the package manager of <a class="xref" href="../pack/">Chapter 20</a>.</li>
+<li>A file compression tool like <code>zip</code>.</li>
 <li>A database that uses B-trees instead of a log for storage.</li>
 </ul>
-<p><strong>Do you need any programming assistance?</strong><br/>
-Yes—please see the <a href="https://github.com/gvwilson/sdxpy/issues">issue tracker</a>.</p>
-<p><strong>Why did you build your own production pipeline instead of using
-<a href="https://www.gitbook.com/">GitBook</a>, <a href="https://quarto.org/">Quarto</a>, <a href="https://jupyterbook.org/">Jupyter Book</a>,
-or some other existing tool?</strong><br/>
-I've written or edited books with those tools and others like them,
+</dd>
+<dt>Do you need any programming assistance?</dt>
+<dd>
+<p>Yes—please see the <a href="https://github.com/gvwilson/sdxpy/issues">issue tracker</a>.</p>
+</dd>
+<dt>Why did you build your own production pipeline instead of using</dt>
+<dt><a href="https://www.gitbook.com/">GitBook</a>, <a href="https://quarto.org/">Quarto</a>, <a href="https://jupyterbook.org/">Jupyter Book</a>,</dt>
+<dt>or some other existing tool?</dt>
+<dd>
+<p>I've written or edited books with those tools and others like them,
 and found them more frustrating than helpful.
 For example,
 the code samples in this book often show one or two methods from a class
@@ -120,20 +134,25 @@ there is no easy way to do this with tools built on computational notebooks.
 That said,
 I'm sure other people will find this book's tooling frustrating,
 and suggestions for improving it are welcome.</p>
-<p><strong>Why is this book free to read online?</strong><br/>
-Because I would rather be able to fix errata
+</dd>
+<dt>Why is this book free to read online?</dt>
+<dd>
+<p>Because I would rather be able to fix errata
 than have people torrenting out-of-date pirated PDFs.</p>
-<p><strong>Why are the royalties going to charity?</strong><br/>
-The <a href="https://www.reddoorshelter.ca/">Red Door Family Shelter</a> and places like it
+</dd>
+<dt>Why are the royalties going to charity?</dt>
+<dd>
+<p>The <a href="https://www.reddoorshelter.ca/">Red Door Family Shelter</a> and places like it
 have always been short of money and resources,
 and the COVID-19 pandemic only made matters worse.
 They do more good on the average Tuesday than most of us do in a year
 (or a lifetime);
 I'm glad to be able to help however I can.</p>
-<h2>Building the HTML</h2>
-<p>To produce HTML, run <code>make docs</code> in the root directory,
-which updates the files in <code>./docs</code>.
-You can also run <code>make serve</code> to preview files locally.</p>
+</dd>
+</dl>
+<h2>Formatting</h2>
+<p>This material uses <a href="https://github.com/gvwilson/mccole/">mccole</a>.
+Please run <code>make</code> in the root directory to get a list of available commands.</p>
 </main>
 <footer aria-label="Page navigation">
 <div class="row">
@@ -146,7 +165,7 @@ You can also run <code>make serve</code> to preview files locally.</p>
 	  <a href="../#acknowledgments">the authors</a>
 </div>
 <div class="col-3 right">
-<a href="../glossary/">Glossary</a> <span aria-hidden="true">⇒</span>
+<a href="../bibliography/">Bibliography</a> <span aria-hidden="true">⇒</span>
 </div>
 </div>
 </footer>

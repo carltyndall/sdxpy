@@ -67,13 +67,13 @@ and better able to use them well.
 ## Appendices
 
 <div id="appendices" markdown="1">
-1.  [Bibliography](@/bibliography/)
-1.  [Bonus Material](@/bonus/)
-1.  [Syllabus](@/syllabus/)
 1.  [License](@/license/)
 1.  [Code of Conduct](@/conduct/)
-1.  [Contributing](@/contrib/)
+1.  [Contributing](@/contributing/)
+1.  [Bibliography](@/bibliography/)
 1.  [Glossary](@/glossary/)
+1.  [Syllabus](@/syllabus/)
+1.  [Bonus Material](@/bonus/)
 </div>
 
 </div>

@@ -4,6 +4,7 @@ version = "0.1.0"
 requires-python = ">=3.12"
 dependencies = [
     "mccole>=2.13.1",
+    "ruff>=0.15.15"
 ]
 
 [tool.mccole]
@@ -29,6 +30,9 @@ skips = [
     "*.xml",
     "*.yml",
     "Makefile",
-    "docs/**",
-    "unused/**",
+    "docs",
+    "examples.mk",
+    "typos.toml",
+    "unused",
+    "uv.lock"
 ]

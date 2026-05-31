@@ -56,13 +56,13 @@
 <div class="dropdown">
 <button aria-controls="nav-appendices" aria-haspopup="true">Appendices</button>
 <ul class="dropdown-content" id="nav-appendices">
-<li><a href="../bibliography/">Bibliography</a></li>
-<li><a href="../bonus/">Bonus Material</a></li>
-<li><a href="../syllabus/">Syllabus</a></li>
 <li><a href="../license/">License</a></li>
 <li><a href="../conduct/">Code of Conduct</a></li>
-<li><a href="../contrib/">Contributing</a></li>
+<li><a href="../contributing/">Contributing</a></li>
+<li><a href="../bibliography/">Bibliography</a></li>
 <li><a href="../glossary/">Glossary</a></li>
+<li><a href="../syllabus/">Syllabus</a></li>
+<li><a href="../bonus/">Bonus Material</a></li>
 </ul>
 </div>
 <a href="https://github.com/gvwilson/sdxpy">Repository</a>
@@ -395,7 +395,7 @@ We will then build a temporary dictionary with all the values in a "row"
 (i.e.,
 the corresponding values across all columns)
 and use <code>**</code> to spread it across the filter function.
-<a class="xref" href="../bonus/">Appendix B</a> looks at a safer, but more complex, way to do this.</p>
+<a class="xref" href="../bonus/">Appendix G</a> looks at a safer, but more complex, way to do this.</p>
 <div data-inc="df_col.py" data-mark="filter"><span aria-label="Source: perf/df_col.py" class="inc-path" role="img" tabindex="0" title="perf/df_col.py">i</span><div class="codehilite"><pre class="" tabindex="0"><span></span><code>    <span class="k">def</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">):</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{</span><span class="n">n</span><span class="p">:</span> <span class="p">[]</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">}</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nrow</span><span class="p">()):</span>
