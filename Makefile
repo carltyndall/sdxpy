@@ -6,10 +6,10 @@ commands:
 	| sed -e 's/## //g' \
 	| column -t -s ':'
 
-## check: check code issues
+## check: check HTML
 .PHONY: check
 check:
-	@ruff check .
+	@mccole check --src . --dst docs --files '*.jpg' '*.png' '*.svg'
 
 ## clean: clean up
 clean:
@@ -25,10 +25,6 @@ fix:
 ## format: format code
 format:
 	@ruff format ${LESSONS}
-
-## html: check HTML
-html:
-	@mccole check --src . --dst docs
 
 ## lint: run all code checks
 lint:
