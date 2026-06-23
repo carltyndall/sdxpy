@@ -36,6 +36,7 @@ skips = [
     "__pycache__",
     "docs",
     "examples.mk",
+    "solutions",
     "typos.toml",
     "unused",
     "uv.lock"
