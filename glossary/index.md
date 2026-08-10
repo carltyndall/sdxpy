@@ -673,7 +673,7 @@ title: "Glossary"
 : A representation of a fixed value in a program, such as the digits `123` for the number 123 or the characters `"abc"` for the string containing those three letters.
 
 <span id="little_endian">little endian</span>
-: A storage scheme in which the most significant part of a number is stored in the byte with the highest address. For example, the 16-bit big-endian representation of 258 stores 0x02 in the lower byte and 0x01 in the higher byte
+: A storage scheme in which the most significant part of a number is stored in the byte with the highest address. For example, the 16-bit little-endian representation of 258 stores 0x02 in the lower byte and 0x01 in the higher byte
   See also: big_endian.
 
 <span id="local">local</span>
